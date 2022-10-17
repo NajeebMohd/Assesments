@@ -1,0 +1,16 @@
+// -------------------------- CODE IN JAVA (REVERSE WORD) --------------------//
+public static String reverseWord(String st) {
+		String ans = "", temp = "";
+		
+		for(int i = 0; i < st.length(); i++) {			
+			if(st.charAt(i) == ' ') {				
+				ans = temp +' ' + ans ;
+				temp = "";
+			}else {
+				temp += st.charAt(i);
+			}
+		}
+		if(st.charAt(st.length() - 1) != ' ') ans = temp+' '+ans;		
+		
+		return ans;
+	}
